@@ -12,8 +12,12 @@ if not User.objects.filter(username="admin").exists():
     User.objects.create_superuser(
         username="admin",
         email="admin@example.com",
-        password="admin123"
+        password="admin123",
+        role="ADMIN"
     )
-    print("Superuser created")
 else:
-    print("Superuser already exists")
+    user = User.objects.get(username="admin")
+    if not user.role:
+        user.role = "ADMIN"
+        user.save()
+        print("Updated admin role to ADMIN")
