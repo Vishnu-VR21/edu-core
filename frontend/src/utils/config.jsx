@@ -1,11 +1,6 @@
 const config = {
-    
-    // baseurl : "https://websitebackend6.altostechnologies.in/",
-	// imgurl : "https://websitebackend6.altostechnologies.in",
-
-    baseurl: "http://127.0.0.1:8000/",
-    imgurl: "http://127.0.0.1:8000",
-    
-}
+  baseurl: process.env.REACT_APP_BASE_URL,
+  imgurl: process.env.REACT_APP_IMG_URL,
+};
 
 export default config;
