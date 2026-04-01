@@ -90,7 +90,7 @@ This is mandatory — system won’t function without admin creating branches.
 
 Step 8: Run Backend Server
 python manage.py runserver
-🔐 Authentication & Access Control
+Authentication & Access Control
 Uses DRF Token Authentication
 Implements Role-Based Access Control (RBAC)
 Roles in System:
