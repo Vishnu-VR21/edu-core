@@ -52,10 +52,7 @@ def request_for_login(request):
             status=status.HTTP_403_FORBIDDEN
         )
 
-    if user.is_superuser:
-        resolved_role = "ADMIN"
-    else:
-        resolved_role = user.role
+    resolved_role = user.role if user.role else "ADMIN"
 
     token, _ = Token.objects.get_or_create(user=user)
 
