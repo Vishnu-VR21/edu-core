@@ -6,6 +6,7 @@ from django.core.exceptions import ValidationError
 
 class User(AbstractUser):
     ROLE_CHOICES = (
+        ('ADMIN', 'Admin'),
         ('BRANCH', 'Branch'),
         ('PRINCIPAL', 'Principal'),
         ('TEACHER', 'Teacher'),
