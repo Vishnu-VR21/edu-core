@@ -16,7 +16,7 @@ class User(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True)
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES)
+    role = models.CharField(max_length=20,choices=ROLE_CHOICES,null=True,blank=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
